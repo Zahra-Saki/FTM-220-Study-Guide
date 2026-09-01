@@ -1,175 +1,217 @@
 import json
 from shiny import App, render, ui
 
-# Complete mind map hierarchy transcribed from your study guide
+# Complete mind map hierarchy transcribed directly from your new image
 mindmap_data = {
-    "name": "Fashion Supply Chain Management Study Guide",
+    "name": "Fashion Supply Chain Management (Chapters 1-3)",
     "children": [
         {
-            "name": "Fundamentals of SCM",
+            "name": "Supply Chain Foundations (Chapter 1)",
             "children": [
                 {
-                    "name": "Working Definition",
+                    "name": "Definition and Scope (Chapter 1)",
                     "children": [
-                        {"name": "Collaboration of Stakeholders"},
-                        {"name": "Seamless Production and Delivery"},
+                        {
+                            "name": (
+                                "Complex Collaboration of Stakeholders"
+                                " (Chapter 1)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Seamless Production and Delivery (Chapter 1)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Key Contributors: Logistics and Inventory"
+                                " (Chapter 1)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "The Lifeline of the Fashion Industry"
+                                " (Chapter 1)"
+                            )
+                        },
                     ],
                 },
                 {
-                    "name": "Essential Operations",
+                    "name": "Historical Origins (Chapter 1)",
                     "children": [
-                        {"name": "Sourcing and Procurement"},
-                        {"name": "Production and Logistics"},
-                        {"name": "Inventory Management"},
-                        {"name": "Supply Network Control"},
+                        {"name": "Military Influence: Art of War (Chapter 1)"},
+                        {
+                            "name": (
+                                "Standardized Sizing and Mass Production"
+                                " (Chapter 1)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Civil War Ready-to-Wear Uniforms (Chapter 1)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Peter Drucker: Management Principles"
+                                " (Chapter 1)"
+                            )
+                        },
                     ],
                 },
                 {
-                    "name": "Industry Lifeline",
+                    "name": "Technological Evolution (Chapter 1)",
                     "children": [
-                        {"name": "Economic Movement"},
-                        {"name": "Overall Efficiency"},
-                        {"name": "Customer Expectations"},
+                        {
+                            "name": (
+                                "Industrial Revolution: Sewing Machines"
+                                " (Chapter 1)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Ford's Assembly Line Principles (Chapter 1)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Global Containerized Shipping (Chapter 1)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Barcoding and UPC Standardization (Chapter 1)"
+                            )
+                        },
+                        {"name": "EDI and MRP Systems (Chapter 1)"},
                     ],
                 },
             ],
         },
         {
-            "name": "Historical Development",
+            "name": "The Global Supply Chain (Chapter 2)",
             "children": [
                 {
-                    "name": "Industrial Revolution",
+                    "name": "Factors Impacting Sourcing (Chapter 2)",
                     "children": [
-                        {"name": "Innovations in Textile Mills"},
-                        {"name": "Evolution of Transportation"},
-                        {"name": "Advancements in Logistics"},
+                        {"name": "Rising Labor Costs in China (Chapter 2)"},
+                        {
+                            "name": (
+                                "Political Climate and Infrastructure"
+                                " (Chapter 2)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Proximity to Emerging Markets (Chapter 2)"
+                            )
+                        },
+                        {"name": "Impact of Quotas on Strategy (Chapter 2)"},
                     ],
                 },
                 {
-                    "name": "Commercial Development",
+                    "name": "Manufacturing Models (Chapter 2)",
                     "children": [
-                        {"name": "Standardized Size Systems"},
-                        {"name": "World Assembly Line Concept"},
-                        {"name": "Mass Market Production"},
+                        {
+                            "name": (
+                                "Cut, Make, and Trim (CMT) Process (Chapter 2)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Transactional vs. Strategic Partnerships"
+                                " (Chapter 2)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Efficiency through Collaborative Testing"
+                                " (Chapter 2)"
+                            )
+                        },
                     ],
                 },
                 {
-                    "name": "Technology and Modern Era",
+                    "name": "Regional Historical Roles (Chapter 2)",
                     "children": [
-                        {"name": "Fast Fashion Evolution"},
-                        {"name": "Barcoding and UPC Systems"},
-                        {"name": "Electronic Data Interchange (EDI)"},
-                        {"name": "Material Requirements Planning (MRP)"},
-                    ],
-                },
-                {
-                    "name": "Modern Market",
-                    "children": [
-                        {"name": "Global Production Networks"},
-                        {"name": "Sourcing and Logistics Integrations"},
-                        {"name": "Fast Fashion Expansion"},
+                        {"name": "US Economic Boom Post-WWII (Chapter 2)"},
+                        {
+                            "name": (
+                                "Japan: Keiretsu and Technology Focus"
+                                " (Chapter 2)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "South Korea: Textiles and Footwear Hub"
+                                " (Chapter 2)"
+                            )
+                        },
                     ],
                 },
             ],
         },
         {
-            "name": "The Global Supply Chain",
+            "name": "CSR and Sustainability (Chapter 3)",
             "children": [
                 {
-                    "name": "Framework and Scope",
+                    "name": "Core CSR Concepts (Chapter 3)",
                     "children": [
-                        {"name": "Global Footprint Networks"},
-                        {"name": "Material Sourcing"},
-                        {"name": "Interconnected Services"},
+                        {
+                            "name": (
+                                "Responsibility for Societal Impact (Chapter 3)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Catalysts for Change: Safety and Labor"
+                                " (Chapter 3)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Human and Environmental Justice (Chapter 3)"
+                            )
+                        },
                     ],
                 },
                 {
-                    "name": "Governments and Trade Policy",
+                    "name": "Key Participant Perspectives (Chapter 3)",
                     "children": [
-                        {"name": "Tariffs and Quotas"},
-                        {"name": "Mass Sourcing Arrangements"},
-                        {"name": "WTO Framework Impact"},
-                        {"name": "Trade Agreements and Tariffs"},
+                        {
+                            "name": (
+                                "Philanthropy: TOMS and Warby Parker"
+                                " (Chapter 3)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Ethical Design: Stella McCartney (Chapter 3)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Consumer Awareness and Commitment (Chapter 3)"
+                            )
+                        },
                     ],
                 },
                 {
-                    "name": "Sourcing Options",
+                    "name": "Tools and Standards (Chapter 3)",
                     "children": [
-                        {"name": "Global Sourcing Networks"},
-                        {"name": "Nearshoring and Reshoring"},
-                        {"name": "Onshoring / Domestic Sourcing"},
-                        {"name": "Outsourcing vs In-house Sourcing"},
-                    ],
-                },
-                {
-                    "name": "Logistics Infrastructure",
-                    "children": [
-                        {"name": "Multimodal Infrastructure"},
-                        {"name": "Distribution and Supply Chains"},
-                        {"name": "Hub Strategies"},
-                    ],
-                },
-            ],
-        },
-        {
-            "name": "Corporate Social Responsibility",
-            "children": [
-                {
-                    "name": "CSR and Sustainability Concepts",
-                    "children": [
-                        {"name": "Environmental Impact Concerns"},
-                        {"name": "Resource Footprint Audits"},
-                    ],
-                },
-                {
-                    "name": "Metrics and Actions",
-                    "children": [
-                        {"name": "Sustainable Materials"},
-                        {"name": "Water and Energy Sparing Processes"},
-                        {"name": "Waste Reduction Strategies"},
-                    ],
-                },
-                {
-                    "name": "Ethical Challenges",
-                    "children": [
-                        {"name": "Human Rights and Fair Wages"},
-                        {"name": "Unsafe Working Conditions"},
-                        {"name": "Pollution/Waste and Landfills"},
-                    ],
-                },
-                {
-                    "name": "Key Strategic Participants",
-                    "children": [
-                        {"name": "Brands and Designers"},
-                        {"name": "Primary Supply Chain (CMT/FOB)"},
-                        {"name": "Third-Party Collaborators"},
-                    ],
-                },
-            ],
-        },
-        {
-            "name": "Modern Market Disruptors",
-            "children": [
-                {
-                    "name": "Commercial Expectations",
-                    "children": [
-                        {"name": "Shifting Consumer Demands"},
-                        {"name": "Autonomy and Eco-conscious Designs"},
-                    ],
-                },
-                {
-                    "name": "Pressure of Social Media",
-                    "children": [
-                        {"name": "Real-Time Feedback Loops"},
-                        {"name": "Micro-Trends and Influencers"},
-                    ],
-                },
-                {
-                    "name": "Ecommerce Pressure",
-                    "children": [
-                        {"name": "Omnichannel Distribution"},
-                        {"name": "Operational Infrastructure"},
-                        {"name": "Direct-to-Consumer Models"},
+                        {
+                            "name": (
+                                "Evolution of Vendor Compliance (Chapter 3)"
+                            )
+                        },
+                        {
+                            "name": (
+                                "Higg Index and Sustainability Metrics"
+                                " (Chapter 3)"
+                            )
+                        },
+                        {"name": "Fair Labor Association (Chapter 3)"},
+                        {"name": "Third-Party Certifications (Chapter 3)"},
                     ],
                 },
             ],
@@ -211,7 +253,7 @@ def build_horizontal_mindmap_html(data):
             cursor: pointer;
         }}
         .node text {{
-            font-size: 12px;
+            font-size: 11.5px;
             font-weight: 500;
             fill: #0f172a;
             text-anchor: middle;
@@ -263,7 +305,7 @@ def build_horizontal_mindmap_html(data):
 
         // Pan & Zoom support
         const zoom = d3.zoom()
-            .scaleExtent([0.3, 2.5])
+            .scaleExtent([0.2, 2.5])
             .on("zoom", (event) => {{
                 gContainer.attr("transform", event.transform);
             }});
@@ -271,10 +313,10 @@ def build_horizontal_mindmap_html(data):
         svg.call(zoom);
 
         // Center initially on left side
-        svg.call(zoom.transform, d3.zoomIdentity.translate(120, window.innerHeight / 2).scale(0.85));
+        svg.call(zoom.transform, d3.zoomIdentity.translate(140, window.innerHeight / 2).scale(0.8));
 
-        // Use nodeSize for predictable vertical & horizontal spacing
-        const tree = d3.tree().nodeSize([42, 260]);
+        // Predictable vertical and horizontal spacing
+        const tree = d3.tree().nodeSize([38, 350]);
 
         const diagonal = d3.linkHorizontal()
             .x(d => d.y)
@@ -284,7 +326,7 @@ def build_horizontal_mindmap_html(data):
         root.x0 = 0;
         root.y0 = 0;
 
-        // Collapse starting from level 2
+        // Collapse starting from level 2 initially
         if (root.children) {{
             root.children.forEach(d => {{
                 if (d.children) d.children.forEach(collapse);
@@ -307,8 +349,8 @@ def build_horizontal_mindmap_html(data):
             const nodes = root.descendants();
             const links = root.links();
 
-            // Horizontal spacing per level
-            nodes.forEach(d => {{ d.y = d.depth * 250; }});
+            // Horizontal spacing per level to accommodate long text labels
+            nodes.forEach(d => {{ d.y = d.depth * 320; }});
 
             // --- LINKS ---
             const link = gContainer.selectAll('path.link')
@@ -349,25 +391,27 @@ def build_horizontal_mindmap_html(data):
                     update(d);
                 }});
 
-            // Pill box dimensions calculated per node
+            // Dynamically calculate box width based on text length
+            const getBoxWidth = (d) => Math.max(160, d.data.name.length * 7.2 + 30);
+
             nodeEnter.append('rect')
                 .attr('rx', 10)
                 .attr('ry', 10)
-                .attr('height', 34)
-                .attr('y', -17)
-                .attr('width', d => Math.max(140, d.data.name.length * 7.5 + 24))
-                .attr('x', d => -Math.max(140, d.data.name.length * 7.5 + 24) / 2)
+                .attr('height', 32)
+                .attr('y', -16)
+                .attr('width', d => getBoxWidth(d))
+                .attr('x', d => -getBoxWidth(d) / 2)
                 .style('fill', d => {{
-                    if (d.depth === 0) return '#c7d2fe'; // Root purple
-                    if (d.depth === 1) return '#dbeafe'; // Level 1 blue
-                    if (d.depth === 2) return '#bbf7d0'; // Level 2 green
-                    return '#dcfce7';                   // Level 3 soft green
+                    if (d.depth === 0) return '#c7d2fe'; // Root Indigo
+                    if (d.depth === 1) return '#dbeafe'; // Level 1 Blue
+                    if (d.depth === 2) return '#dcfce7'; // Level 2 Green
+                    return '#dcfce7';                   // Level 3 Green
                 }})
                 .style('stroke', d => {{
                     if (d.depth === 0) return '#6366f1';
                     if (d.depth === 1) return '#3b82f6';
                     if (d.depth === 2) return '#22c55e';
-                    return '#16a34a';
+                    return '#22c55e';
                 }})
                 .style('stroke-width', '1.5px');
 
@@ -375,13 +419,13 @@ def build_horizontal_mindmap_html(data):
             nodeEnter.append('text')
                 .text(d => d.data.name);
 
-            // Toggle Button (< / >) on the right edge of expandable nodes
+            // Toggle Button (< / >) on the right edge
             const toggleGroup = nodeEnter.append('g')
                 .attr('class', 'toggle-btn')
-                .attr('transform', d => `translate(${{Math.max(140, d.data.name.length * 7.5 + 24) / 2}}, 0)`);
+                .attr('transform', d => `translate(${{getBoxWidth(d) / 2}}, 0)`);
 
             toggleGroup.append('circle')
-                .attr('r', 9);
+                .attr('r', 8.5);
 
             toggleGroup.append('text')
                 .attr('class', 'toggle-text');
@@ -414,7 +458,7 @@ def build_horizontal_mindmap_html(data):
 
 
 app_ui = ui.page_fluid(
-    ui.h3("Fashion Supply Chain Management Mind Map"),
+    ui.h3("Fashion Supply Chain Management (Chapters 1-3) Mind Map"),
     ui.output_ui("mindmap_ui"),
 )
 
@@ -424,7 +468,10 @@ def server(input, output, session):
     def mindmap_ui():
         return ui.tags.iframe(
             srcdoc=build_horizontal_mindmap_html(mindmap_data),
-            style="width: 100%; height: 850px; border: 1px solid #cbd5e1; border-radius: 12px; background: #fff;",
+            style=(
+                "width: 100%; height: 880px; border: 1px solid #cbd5e1;"
+                " border-radius: 12px; background: #fff;"
+            ),
         )
 
 
